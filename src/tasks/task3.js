@@ -27,9 +27,9 @@ export function renderLadder(height) {
 
   let result = "";
   let ladder = "";
-  for (let a = 1; a <= h; a++) {
-    ladder = ladder + a;
-    result += ladder + "\n";
+  for (let i = 1; i <= h; i++) {
+    ladder = ladder + i;
+    result += "\n" + ladder;
   }
-  return result.trimEnd();
+  return result.trimStart();
 }

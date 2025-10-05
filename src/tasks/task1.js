@@ -10,7 +10,7 @@ export function processWord(word, ignoredCharacted) {
   if (!/^[а-яА-Яa-zA-Z]*$/.test(word)) {
     throw new Error("Слово содержит небуквенные символы");
   }
-  
+
   if (word === null) {
     throw new Error("Некорректное слово");
   }
@@ -19,9 +19,9 @@ export function processWord(word, ignoredCharacted) {
     throw new Error("Не указан игнорируемый символ");
   }
 
-  for (let ix = 0; ix < word.length; ix++) {
-    if (word[ix].toLowerCase() !== ignoredCharacted.toLowerCase()) {
-      result += word[ix];
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].toLowerCase() !== ignoredCharacted.toLowerCase()) {
+      result += word[i];
     }
   }
 

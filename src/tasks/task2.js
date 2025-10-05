@@ -15,15 +15,13 @@ export function getMultiplesOfThree(userInput) {
     throw new Error("Некорректные входные данные");
   }
 
-  
-  let i = 1;
   let a = "";
-  while (i < userInput) {
-    i++;
+  for (let i = 1; i <= userInput; i++) {
     if (i % 3 === 0) {
       a += i + ", ";
       result = a.slice(0, -2);
     }
   }
+
   return result;
 }
