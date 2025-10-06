@@ -14,15 +14,16 @@ export function isPalindrome(word) {
     throw new Error("Некорректные входные данные");
   }
 
-  let wordreversed = "";
   let result = "";
-  for (let a = word.length - 1; a >= 0; a--) {
-    wordreversed += word[a];
-  }
-  if (word.toLowerCase() === wordreversed.toLowerCase()) {
-    result = " - палиндром";
-  } else {
-    result = " - не палиндром";
+  let left = 0;
+  let right = word.length;
+  for (left; left < word.length - 1; left++) {
+    right--;
+    if (word[left].toLowerCase() === word[right].toLowerCase()) {
+      result = " - палиндром";
+    } else {
+      result = " - не палиндром";
+    }
   }
   if (word.length === 1) {
     result = " - не палиндром";
